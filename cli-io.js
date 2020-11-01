@@ -44,11 +44,11 @@ class CLIio {
         let program = path.basename(process.argv[1])
         program = program.replace(/\.[a-zA-Z]+$/, "")
         this.options = {
-            ...options,
             encoding:  "utf8",
             logLevel:  "info",
             logTime:   true,
-            logPrefix: program
+            logPrefix: program,
+            ...options
         }
         this.logLevels = {
             none:    { level: 0 },
@@ -63,9 +63,9 @@ class CLIio {
     async input (url, options = {}) {
         /*  provide option defaults  */
         options = {
-            ...options,
             encoding: this.options.encoding,
-            agent:    `${my.name}/${my.version}`
+            agent:    `${my.name}/${my.version}`,
+            ...options
         }
 
         /*  read input data  */
@@ -98,13 +98,13 @@ class CLIio {
     async output (url, data, options = {}) {
         /*  provide option defaults  */
         options = {
-            ...options,
             dump:            false,
             format:          "json",
             trailingNewline: false,
             noColor:         false,
             encoding:        this.options.encoding,
-            flag:            "a"
+            flag:            "a",
+            ...options
         }
 
         /*  optionally dump object  */
