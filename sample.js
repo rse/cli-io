@@ -7,6 +7,6 @@ const CLIio = require(".")
     const input = await cli.input(process.argv[2], { encoding: "utf8" })
     await cli.output(process.argv[3], input, { encoding: "utf8" })
 })().catch((err) => {
-    console.log(`sample: ERROR: ${err}`)
+    console.log(`sample: ERROR: ${err.stack}`)
 })
 
