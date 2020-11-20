@@ -103,7 +103,7 @@ class CLIio {
             trailingNewline: false,
             noColor:         false,
             encoding:        this.options.encoding,
-            flag:            "a",
+            flag:            "w",
             ...options
         }
 
