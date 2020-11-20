@@ -103,6 +103,7 @@ class CLIio {
             trailingNewline: false,
             noColor:         false,
             encoding:        this.options.encoding,
+            mode:            0o666,
             flag:            "w",
             ...options
         }
@@ -152,6 +153,7 @@ class CLIio {
             url = url.replace(/^file:(?:\/\/)?/, "")
             await fs.promises.writeFile(url, data, {
                 encoding: options.encoding,
+                mode:     options.mode,
                 flag:     options.flag
             })
         }

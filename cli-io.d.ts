@@ -46,6 +46,7 @@ export class CLIio {
             trailingNewline?: boolean,
             noColor?:         boolean,
             encoding?:        string,
+            mode?:            number,
             flag?:            string
         }
     ): Promise<void>
