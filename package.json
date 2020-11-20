@@ -1,6 +1,6 @@
 {
     "name":                       "cli-io",
-    "version":                    "0.9.4",
+    "version":                    "0.9.5",
     "description":                "Command-Line Interface I/O",
     "keywords":                   [ "cli", "input", "output", "stdin", "stdout", "file", "url" ],
     "license":                    "MIT",
