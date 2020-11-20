@@ -25,32 +25,33 @@
 /*  the API class  */
 export class CLIio {
     constructor(options?: {
-        encoding:            string,
-        logLevel:            string,
-        logPrefix:           string
+        encoding?:            string,
+        logLevel?:            string,
+        logTime?:             boolean,
+        logPrefix?:           string
     })
     static input(
-        url:                 string,
+        url:                  string,
         options?: {
-            encoding:        string,
-            agent:           string
+            encoding?:        string,
+            agent?:           string
         }
     ): Promise<any>
     static output(
-        url:                 string,
-        data:                any,
+        url:                  string,
+        data:                 any,
         options?: {
-            dump:            boolean,
-            format:          string,
-            trailingNewline: boolean,
-            noColor:         boolean,
-            encoding:        string,
-            flag:            string
+            dump?:            boolean,
+            format?:          string,
+            trailingNewline?: boolean,
+            noColor?:         boolean,
+            encoding?:        string,
+            flag?:            string
         }
     ): Promise<void>
     static log(
-        level:               string,
-        message:             string
+        level:                string,
+        message:              string
     )
 }
 

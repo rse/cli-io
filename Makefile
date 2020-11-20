@@ -32,7 +32,6 @@ bootstrap:
 
 build: bootstrap
 	$(NPM) run prepublishOnly
-	$(NPM) run build
 
 clean: bootstrap
 
