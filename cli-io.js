@@ -199,7 +199,7 @@ class CLIio {
 
         /*  write log information  */
         await new Promise((resolve) => {
-            process.stderr.write(msg, { encoding: "utf8" }, () => {
+            process.stderr.write(msg, "utf8", () => {
                 /*  intentionally ignore write errors, as there is
                     no way to deal with it in a reasonable way and
                     it is not necessary at all, too  */
