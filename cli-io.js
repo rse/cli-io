@@ -79,7 +79,7 @@ class CLIio {
         else if (url.match(/^https?:\/\/.+/)) {
             /*  read data from URL with HTTP  */
             data = await got({
-                url:      url,
+                url,
                 encoding: options.encoding,
                 headers:  { "User-Agent": options.agent }
             })
