@@ -41,7 +41,7 @@ const CLIio = require("cli-io")
 
 const cli = new CLIio()
 
-cli.log("error", "sample")
+cli.log("info", "sample")
 
 let data = await cli.input(inputURL)
 
