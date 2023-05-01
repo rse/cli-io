@@ -1,5 +1,5 @@
 ##
-##  CLI-IO -- Command-Line Interface I/O
+##  CLIio -- Command-Line Interface I/O
 ##  Copyright (c) 2020-2023 Dr. Ralf S. Engelschall <rse@engelschall.com>
 ##
 ##  Permission is hereby granted, free of charge, to any person obtaining
