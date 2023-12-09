@@ -30,14 +30,14 @@ export class CLIio {
         logTime?:             boolean,
         logPrefix?:           string
     })
-    static input(
+    input(
         url:                  string,
         options?: {
             encoding?:        string,
             agent?:           string
         }
     ): Promise<any>
-    static output(
+    output(
         url:                  string,
         data:                 any,
         options?: {
@@ -50,9 +50,9 @@ export class CLIio {
             flag?:            string
         }
     ): Promise<void>
-    static log(
+    log(
         level:                string,
         message:              string
-    )
+    ): Promise<void>
 }
 
