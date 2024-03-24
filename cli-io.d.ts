@@ -23,7 +23,7 @@
 */
 
 /*  the API class  */
-export class CLIio {
+export default class CLIio {
     constructor(options?: {
         encoding?:            string,
         logLevel?:            string,
