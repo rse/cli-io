@@ -33,7 +33,7 @@ export default class CLIio {
     input(
         url:                  string,
         options?: {
-            encoding?:        string,
+            encoding?:        string | null,
             agent?:           string
         }
     ): Promise<any>
