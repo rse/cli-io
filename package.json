@@ -34,6 +34,12 @@
         "chalk":                  "4.1.2",
         "dayjs":                  "1.11.23"
     },
+    "overrides": {
+        "webdav": {
+            "axios":              "0.35.0",
+            "fast-xml-parser":    "5.12.1"
+        }
+    },
     "upd":                        [ "!strip-ansi", "!chalk", "!got", "!webdav", "!eslint", "!@eslint/js" ],
     "engines": {
         "node":                   ">=12.0.0"
