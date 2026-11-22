@@ -27,7 +27,6 @@ const path       = require("path")
 const fs         = require("fs")
 
 /*  external requirements  */
-const getStream  = require("get-stream")
 const jsYAML     = require("js-yaml")
 const stripAnsi  = require("strip-ansi")
 const got        = require("got")
@@ -72,9 +71,11 @@ class CLIio {
         let data
         if (url === "-" || url === "stdin:") {
             /*  read data from stdin  */
-            data = await getStream(process.stdin, {
-                encoding: options.encoding
-            })
+            const chunks = []
+            for await (const chunk of process.stdin)
+                chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk))
+            const buffer = Buffer.concat(chunks)
+            data = options.encoding === "buffer" ? buffer : buffer.toString(options.encoding || "utf8")
         }
         else if (url.match(/^https?:\/\/.+/)) {
             /*  read data from URL with HTTP  */
